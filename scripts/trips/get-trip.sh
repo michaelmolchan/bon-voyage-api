@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # RUN WITH:
-# TOKEN=<CURRENT TOKEN> ID=<ID> sh scripts/destinations/get-destination.sh
+# TOKEN=<CURRENT TOKEN> ID=<ID> sh scripts/trips/get-trip.sh
 
-curl "http://localhost:4741/destinations/{$ID}" \
+curl "http://localhost:4741/trips/{$ID}" \
   --include \
   --request GET \
   --header "Content-Type: application/json" \

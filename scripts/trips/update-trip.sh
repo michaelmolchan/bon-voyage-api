@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # RUN WITH:
-# TOKEN=<CURRENT TOKEN> CITY=<CITY> COUNTRY=<COUNTRY> sh scripts/destinations/create-destination.sh
+# TOKEN=<CURRENT TOKEN> ID=<ID> CITY=<CITY> COUNTRY=<COUNTRY> sh scripts/trips/update-trip.sh
 
-curl "http://localhost:4741/destinations" \
+curl "http://localhost:4741/trips/{$ID}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "destination": {
+    "trip": {
       "city": "'"${CITY}"'",
+      "state": "'"${STATE}"'",
       "country": "'"${COUNTRY}"'"
     }
   }'
