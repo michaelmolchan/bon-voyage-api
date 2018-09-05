@@ -1,4 +1,4 @@
-<% project_name = 'travel-journal-api' %>
+<% project_name = 'bon-voyage-api' %>
 
 default: &default
   adapter: postgresql
